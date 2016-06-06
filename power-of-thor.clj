@@ -6,8 +6,7 @@
         vectorX (if (< lightX initialTX) (repeat (- initialTX lightX) "W" ) (repeat (- lightX initialTX) "E" ))
         vectorY (if (< lightY initialTY) (repeat (- initialTY lightY) "N" ) (repeat (- lightY initialTY) "S" ))
         ]
-
-
+        
   (defn turn [vectorX vectorY] (
     (let [remainingTurns (read) x (first vectorX) y (first vectorY)]
       (if y (print y))
