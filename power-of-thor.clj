@@ -13,8 +13,6 @@
       (if y (print y))
       (if x (print x))
       (println)
-      (binding [*out* *err*]
-        (println vectorX vectorY))
     )
     (turn (rest vectorX) (rest vectorY))
   ))
