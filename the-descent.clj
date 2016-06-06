@@ -6,15 +6,9 @@
 
 (defn -main [& args]
   (while true
-    (let [mountans (map (replicate 8 0) (read)]
-    (loop [i 8]
-      (when (> i 0)
-        (let [mountainH (read)]
-          ; mountainH: represents the height of one mountain, from 9 to 0.
-        (recur (dec i)))))
-
-    ; (binding [*out* *err*]
-    ;   (println "Debug messages..."))
-
-    ; The number of the mountain to fire on.
-    (println "4")))
+    (let [mountains (map (fn [x] (read)) (replicate 8 0))]
+      (println
+        (first (apply max-key second (map-indexed vector mountains)))
+      )
+    )
+  ))
